@@ -1,0 +1,43 @@
+﻿<Window x:Class="OOPLab1.TaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOPLab1"
+        mc:Ignorable="d"
+        Title="TaskWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Название:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="TxtTitle" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <Label Content="Описание:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="TxtDescription" Grid.Row="1" Grid.Column="1" Margin="5" Height="50" TextWrapping="Wrap"/>
+
+        <Label Content="Срок:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <DatePicker x:Name="DpDueDate" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <Label Content="Приоритет:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <ComboBox x:Name="CbPriority" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+        <Label Content="Статус:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
+        <ComboBox x:Name="CbStatus" Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button Content="OK" Click="BtnSave_Click" Width="70" Margin="5"/>
+            <Button Content="Отмена" Click="BtnCancel_Click" Width="70" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
