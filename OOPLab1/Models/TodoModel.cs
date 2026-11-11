@@ -14,6 +14,7 @@ namespace OOPLab1.Models
 		Completed
 	}
 
+
 	public class TodoModel
 	{
 		private string _title = "Новая задача";
